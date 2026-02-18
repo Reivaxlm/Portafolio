@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Meléndez | Full Stack Developer & Data Analyst</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="progress-container"><div id="progress-bar"></div></div>
+    <div class="bg-glow"></div>
+
+    <header>
+        <nav>
+            <div class="logo">LUIS<span>.DEV</span></div>
+            <ul class="nav-links">
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 data-aos="zoom-in">Luis Meléndez</h1>
+        <p class="typing-container">Especialista en <span id="typed" class="highlight"></span></p>
+        <div class="btn-container">
+            <a href="descargas/CVnew.pdf" class="btn-cv" download>
+                <i class="fas fa-download"></i> Descargar CV (PDF)
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <section class="glass-card" id="perfil" data-aos="fade-up">
+            <h2><i class="fas fa-user-code"></i> Perfil Profesional</h2>
+            <p>T.S.U. en Informática con sólida base técnica en programación web y análisis de datos. Experto en <strong>PHP, Python y SQL</strong>. Mi trayectoria combina la precisión técnica con la eficiencia operativa adquirida en la gestión de logística y atención al cliente.</p>
+        </section>
+
+        <section class="skills-grid" data-aos="fade-up">
+            <div class="skill-item"><i class="fas fa-code"></i> <h3>Lenguajes</h3><p>PHP, Python, C#, C++, SQL, JS</p></div>
+            <div class="skill-item"><i class="fas fa-database"></i> <h3>Data & ERP</h3><p>Power BI, Odoo, PostgreSQL</p></div>
+            <div class="skill-item"><i class="fas fa-tools"></i> <h3>Soporte</h3><p>Hardware, Redes, Software</p></div>
+        </section>
+
+        <section id="proyectos">
+            <h2 data-aos="fade-right">Proyectos Destacados</h2>
+            <div class="project-grid">
+                
+                <div class="project-card" data-aos="flip-left">
+                    <div class="slider-wrapper" id="slider1">
+                        <div class="slider">
+                            <img src="img/p1_foto1.png" class="slide active" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=Captura+Sistema'">
+                            <video class="slide" muted loop playsinline>
+                                <source src="img/p1_video.mp4" type="video/mp4">
+                            </video>
+                            <img src="img/p1_foto2.png" class="slide" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=Modulo+Inventario'">
+                            <video class="slide" muted loop playsinline>
+                                <source src="img/p1_video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        
+                        <button class="slide-btn prev" onclick="changeSlide('slider1', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" onclick="changeSlide('slider1', 1)"><i class="fas fa-chevron-right"></i></button>
+
+                        <div class="dots-wrapper">
+                            <span class="dot active" onclick="currentSlide('slider1', 0)"></span>
+                            <span class="dot" onclick="currentSlide('slider1', 1)"></span>
+                            <span class="dot" onclick="currentSlide('slider1', 2)"></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestion de Prestamos</h3>
+                        <p>Gestión de prestamos de libros en una biblioteca.</p>
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Reivaxlm/Sistema-de-Biblioteca" class="btn-main">Código</a>
+                            <a href="../portafolio/Img/p1_video2.mp4" class="btn-main video-link"><i class="fas fa-play"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="slider-wrapper" id="slider2">
+                        <div class="slider">
+                            <img src="img/p2_1.jpg" class="slide active" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=Proyecto+Odoo'">
+                            <img src="img/p2_2.jpg" class="slide" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=ERP+Custom'">
+                        </div>
+                        <button class="slide-btn prev" onclick="changeSlide('slider2', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" onclick="changeSlide('slider2', 1)"><i class="fas fa-chevron-right"></i></button>
+                        <div class="dots-wrapper">
+                            <span class="dot active" onclick="currentSlide('slider2', 0)"></span>
+                            <span class="dot" onclick="currentSlide('slider2', 1)"></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Odoo ERP Custom</h3>
+                        <div class="tags"><span class="tag">Odoo</span><span class="tag">PHP</span></div>
+                        <p>Optimización de procesos operativos y flujos de caja.</p>
+                        <div class="project-actions">
+                            <a href="#" class="btn-main">Ver Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="glass-card" id="experiencia" data-aos="fade-up">
+            <h2><i class="fas fa-graduation-cap"></i> Educación y Certificados</h2>
+            <div class="timeline">
+                <div class="time-item">
+                    <h4>T.S.U. en Informática</h4>
+                    <p>I.U. Jesús Obrero (Barquisimeto)</p>
+                </div>
+                <div class="time-item">
+                    <h4>Certificaciones 2025</h4>
+                    <ul class="cert-list">
+                        <li><i class="fas fa-check-circle"></i> Odoo (Udemy)</li>
+                        <li><i class="fas fa-check-circle"></i> Python (Santander Academy)</li>
+                        <li><i class="fas fa-check-circle"></i> Power BI (Netzun)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-card" id="contacto" data-aos="fade-up">
+            <h2 class="section-title"><i class="fas fa-paper-plane"></i> Conectemos</h2>
+            
+            <div class="contact-container">
+                <div class="contact-form-side">
+                    <form action="contacto.php" method="POST" class="modern-form">
+                        <div class="input-group">
+                            <input type="text" name="nombre" required>
+                            <label>Tu Nombre</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" required>
+                            <label>Correo Electrónico</label>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="mensaje" required></textarea>
+                            <label>¿En qué puedo ayudarte?</label>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span>Enviar Mensaje</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="contact-info-side">
+                    <div class="info-details">
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Venezuela, Barquisimeto</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+58 424-5641808</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-mega-container">
+                        <h4>Redes Profesionales</h4>
+                        <div class="social-flex">
+                            <a href="https://github.com/Reivaxlm" target="_blank" class="social-big github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/luis-melendez-b512ba326" target="_blank" class="social-big linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Luis Meléndez | Full Stack Developer</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="Script.js"></script>
+</body>
+</html>
