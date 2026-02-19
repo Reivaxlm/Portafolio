@@ -192,36 +192,42 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 @media (max-width: 768px) {
     .contact-container { grid-template-columns: 1fr; }
 }
+/* Contenedor de idiomas */
 .lang-menu {
     position: fixed;
-    top: 25px;
-    right: 100px; /* Ajusta esto si choca con otro botón */
-    z-index: 10000;
+    top: 20px;
+    right: 20px;
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    z-index: 10001;
 }
 
 .lang-btn {
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(10px);
-color: white;
-border: 1px solid rgba(255, 255, 255, 0.4);
-padding: 6px 12px;
-border-radius: 4px;
-cursor: pointer;
-font-size: 14px;
-font-weight: bold;
-transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1); /* Efecto cristal */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 .lang-btn:hover {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.2);
 }
- /* Ocultar la barra de Google y los widgets que sobran */
-.goog-te-banner-frame.skiptranslate, .goog-logo-link, .goog-te-gadget span {
+
+/* Ocultar elementos basura de Google */
+.goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-balloon-frame {
     display: none !important;
 }
-body {
-top: 0px !important;
-}
+body { top: 0px !important; }

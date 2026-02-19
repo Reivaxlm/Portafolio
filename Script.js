@@ -62,22 +62,21 @@ window.onscroll = function() {
     let scrolled = (winScroll / height) * 100;
     document.getElementById("progress-bar").style.width = scrolled + "%";
 };
-// Inicializa el traductor de Google de forma invisible
 function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-            pageLanguage: 'es',
-                    includedLanguages: 'en,es',
-                            autoDisplay: false
-                                }, 'google_translate_element');
-                                }
+        new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'en,es',
+                autoDisplay: false
+        }, 'google_translate_element');
+}
 
-                                // Función para cambiar el idioma
-                                function translatePage(lang) {
-                                    const googleSelect = document.querySelector('.goog-te-combo');
-                                        if (googleSelect) {
-                                                googleSelect.value = lang;
-                                                        googleSelect.dispatchEvent(new Event('change'));
-                                                            } else {
-                                                                    console.warn("El traductor aún está cargando... intenta de nuevo en un segundo.");
-                                                                        }
-                                                                        }
+function translatePage(lang) {
+    const googleSelect = document.querySelector('.goog-te-combo');
+        if (googleSelect) {
+            googleSelect.value = lang;
+            googleSelect.dispatchEvent(new Event('change'));
+        } else {
+// Si no encuentra el selector, lo reintenta en 500ms
+            setTimeout(() => translatePage(lang), 500);
+        }
+}
