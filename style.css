@@ -192,3 +192,36 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 @media (max-width: 768px) {
     .contact-container { grid-template-columns: 1fr; }
 }
+.lang-menu {
+    position: fixed;
+    top: 25px;
+    right: 100px; /* Ajusta esto si choca con otro botón */
+    z-index: 10000;
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
+color: white;
+border: 1px solid rgba(255, 255, 255, 0.4);
+padding: 6px 12px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background: white;
+    color: black;
+}
+ /* Ocultar la barra de Google y los widgets que sobran */
+.goog-te-banner-frame.skiptranslate, .goog-logo-link, .goog-te-gadget span {
+    display: none !important;
+}
+body {
+top: 0px !important;
+}

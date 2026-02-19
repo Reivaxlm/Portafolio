@@ -1,7 +1,7 @@
 AOS.init();
 
 var typed = new Typed('#typed', {
-    strings: ['Desarrollo Odoo', 'Python & PHP', 'Análisis de Datos'],
+    strings: ['Desarrollo Odoo', 'Desarrollo Full Stack', 'Desarrollo Web', 'Análisis de Datos', 'Soporte Técnico'],
     typeSpeed: 60, backSpeed: 40, loop: true
 });
 
@@ -62,3 +62,22 @@ window.onscroll = function() {
     let scrolled = (winScroll / height) * 100;
     document.getElementById("progress-bar").style.width = scrolled + "%";
 };
+// Inicializa el traductor de Google de forma invisible
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+            pageLanguage: 'es',
+                    includedLanguages: 'en,es',
+                            autoDisplay: false
+                                }, 'google_translate_element');
+                                }
+
+                                // Función para cambiar el idioma
+                                function translatePage(lang) {
+                                    const googleSelect = document.querySelector('.goog-te-combo');
+                                        if (googleSelect) {
+                                                googleSelect.value = lang;
+                                                        googleSelect.dispatchEvent(new Event('change'));
+                                                            } else {
+                                                                    console.warn("El traductor aún está cargando... intenta de nuevo en un segundo.");
+                                                                        }
+                                                                        }
