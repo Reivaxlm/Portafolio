@@ -93,22 +93,32 @@
                 <div class="project-card" data-aos="flip-left" data-aos-delay="200">
                     <div class="slider-wrapper" id="slider2">
                         <div class="slider">
-                            <img src="img/p2_1.jpg" class="slide active" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=Proyecto+Odoo'">
-                            <img src="img/p2_2.jpg" class="slide" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=ERP+Custom'">
+                            <img src="img/p2_1.png" class="slide active" onerror="this.src='https://via.placeholder.com/400x220/0d1117/38bdf8?text=Captura+Sistema'">
+                            <video class="slide" muted loop playsinline>
+                                <source src="img/p2_video.mp4" type="video/mp4">
+                            </video>
                         </div>
-                        <button class="slide-btn prev" onclick="changeSlide('slider2', -1)"><i class="fas fa-chevron-left"></i></button>
-                        <button class="slide-btn next" onclick="changeSlide('slider2', 1)"><i class="fas fa-chevron-right"></i></button>
+                        
+                        <button class="slide-btn prev" onclick="changeSlide('slider1', -1)"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slide-btn next" onclick="changeSlide('slider1', 1)"><i class="fas fa-chevron-right"></i></button>
+
                         <div class="dots-wrapper">
-                            <span class="dot active" onclick="currentSlide('slider2', 0)"></span>
-                            <span class="dot" onclick="currentSlide('slider2', 1)"></span>
+                            <span class="dot active" onclick="currentSlide('slider1', 0)"></span>
+                            <span class="dot" onclick="currentSlide('slider1', 1)"></span>
+                            <span class="dot" onclick="currentSlide('slider1', 2)"></span>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Odoo ERP Custom</h3>
-                        <div class="tags"><span class="tag">Odoo</span><span class="tag">PHP</span></div>
-                        <p>Optimización de procesos operativos y flujos de caja.</p>
+                        <h3>Sistema de inventario</h3>
+                        <p>sistema de tienda con CRUD completo</p>
+                        <div class="tags">
+                            <span class="tag">C#</span>
+                            <span class="tag">WinForms</span>
+                            <span class="tag">.NET</span>
+                        </div>
                         <div class="project-actions">
-                            <a href="#" class="btn-main">Ver Demo</a>
+                            <a href="https://github.com/Reivaxlm/Sistema-de-inventario" class="btn-main">Código</a>
+                            <a href="https://github.com/Reivaxlm/Sistema-de-inventario/releases/tag/v1.0.0" class="btn-main video-link"><i class="fas fa-play"></i> Descargar Programa</a>
                         </div>
                     </div>
                 </div>
