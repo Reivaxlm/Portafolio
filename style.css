@@ -231,3 +231,41 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     display: none !important;
 }
 body { top: 0px !important; }
+/* Mejora para los grupos de entrada */
+.input-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    background: transparent;
+    outline: none;
+    transition: 0.5s;
+}
+
+/* Animación de la etiqueta al escribir */
+.input-group label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgba(255,255,255,0.5);
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #fff;
+    font-size: 12px;
+}

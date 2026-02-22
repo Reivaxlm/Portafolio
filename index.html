@@ -153,19 +153,25 @@
             
             <div class="contact-container">
                 <div class="contact-form-side">
-                    <form action="contacto.php" method="POST" class="modern-form">
+                    <form action="https://formspree.io/f/mqakpnvb" method="POST" class="modern-form">
+    
                         <div class="input-group">
                             <input type="text" name="nombre" required>
                             <label>Tu Nombre</label>
                         </div>
+                        
                         <div class="input-group">
                             <input type="email" name="email" required>
                             <label>Correo Electrónico</label>
                         </div>
+                        
                         <div class="input-group">
                             <textarea name="mensaje" required></textarea>
                             <label>¿En qué puedo ayudarte?</label>
                         </div>
+
+                        <input type="hidden" name="_next" value="https://reivaxlm.github.io/Portafolio/">
+
                         <button type="submit" class="btn-submit">
                             <span>Enviar Mensaje</span>
                             <i class="fas fa-arrow-right"></i>
