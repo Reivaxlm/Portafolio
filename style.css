@@ -193,40 +193,35 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
     .contact-container { grid-template-columns: 1fr; }
 }
 /* Contenedor de idiomas */
-.lang-menu {
-    position: fixed; /* Se queda quieto aunque bajes la página */
-    top: 20px;       /* Distancia desde arriba */
-    right: 20px;     /* Distancia desde la derecha */
+/* Quitamos el posicionamiento fijo para que entre en el flujo del menú */
+.nav-lang {
     display: flex;
-    gap: 8px;
-    z-index: 99999;  /* Un número muy alto para que NADA lo tape */
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px; /* Separa los botones del texto "Contacto" */
 }
 
-.lang-btn {
-    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+.lang-btn-mini {
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 8px 12px;
-    border-radius: 8px;
+    order: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    backdrop-filter: blur(5px); /* Efecto cristal */
     transition: 0.3s;
 }
 
-.lang-btn:hover {
-    background: white;
-    color: black;
+.lang-btn-mini:hover {
+    background: #00bcd4; /* O el color azul que usas en LUIS.DEV */
+    border-color: #00bcd4;
 }
 
-/* IMPORTANTE: Evita que Google empuje tu página hacia abajo */
-    .goog-te-banner-frame {
-    display: none !important;
+/* Esto oculta el div de Google que suele estorbar arriba */
+#google_translate_element, .skiptranslate {
+display: none !important;
 }
-body {
-    top: 0px !important;
-}
+body { top: 0px !important; }
 
 /* Ocultar elementos basura de Google */
 .goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-balloon-frame {
