@@ -194,43 +194,44 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 }
 /* Contenedor de idiomas */
 .lang-menu {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: fixed; /* Se queda quieto aunque bajes la página */
+    top: 20px;       /* Distancia desde arriba */
+    right: 20px;     /* Distancia desde la derecha */
     display: flex;
-    gap: 10px;
-    z-index: 10001;
+    gap: 8px;
+    z-index: 99999;  /* Un número muy alto para que NADA lo tape */
 }
 
 .lang-btn {
-    background: rgba(255, 255, 255, 0.1); /* Efecto cristal */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 10px 18px;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 50px; /* Bordes redondeados modernos */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 12px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-weight: bold;
+    backdrop-filter: blur(5px); /* Efecto cristal */
+    transition: 0.3s;
 }
 
 .lang-btn:hover {
-    background: #fff;
-    color: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255,255,255,0.2);
+    background: white;
+    color: black;
+}
+
+/* IMPORTANTE: Evita que Google empuje tu página hacia abajo */
+    .goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0px !important;
 }
 
 /* Ocultar elementos basura de Google */
 .goog-te-banner-frame, .skiptranslate, #goog-gt-tt, .goog-te-balloon-frame {
     display: none !important;
 }
-body { top: 0px !important; }
 /* Mejora para los grupos de entrada */
 .input-group {
     position: relative;
