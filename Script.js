@@ -8,11 +8,9 @@ function changeSlide(sliderId, direction) {
     const wrapper = document.getElementById(sliderId);
     if (!wrapper) return;
     
-    // IMPORTANTE: Buscamos los slides dentro del slider y los puntos en el contenedor padre
     const slides = wrapper.querySelectorAll('.slide');
-    const dotsContainer = wrapper.parentElement.querySelector('.dots-wrapper');
-    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
-    
+    // BUSCAMOS LOS DOTS EN EL PADRE (slider-wrapper)
+    const dots = wrapper.parentElement.querySelectorAll('.dot'); 
     let current = 0;
 
     slides.forEach((s, i) => {
@@ -26,7 +24,6 @@ function changeSlide(sliderId, direction) {
     if(dots[current]) dots[current].classList.remove('active');
 
     let next = (current + direction + slides.length) % slides.length;
-    
     slides[next].classList.add('active');
     if(dots[next]) dots[next].classList.add('active');
     if(slides[next].tagName === "VIDEO") slides[next].play();
