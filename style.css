@@ -50,7 +50,30 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 .slide-btn:hover { background: var(--cyan) !important; color: #000 !important; box-shadow: 0 0 15px var(--cyan) !important; }
 
 /* DOTS */
-.dots-wrapper { position: absolute; bottom: 15px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 101; }
+.dots-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px; /* Reducimos el espacio para que quepan los 9 */
+    z-index: 101;
+    background: rgba(0,0,0,0.3); /* Fondo sutil para que se vean sobre la foto */
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+.dots-wrapper {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px; /* Reducimos el espacio para que quepan los 9 */
+    z-index: 101;
+    background: rgba(0,0,0,0.3); /* Fondo sutil para que se vean sobre la foto */
+    padding: 5px 10px;
+    border-radius: 20px;
+}
 .dot { width: 12px; height: 6px; background: rgba(255, 255, 255, 0.3); border-radius: 10px; cursor: pointer; transition: 0.3s; }
 .dot.active { width: 25px; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
 
@@ -488,4 +511,30 @@ body { top: 0px !important; }
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.vertical-slider-container .slider {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-slider-container .slide {
+    /* Cambiamos COVER por CONTAIN para ver la imagen COMPLETA */
+    object-fit: contain !important; 
+    
+    /* Evita que la imagen intente medir más que su contenedor */
+    max-height: 100% !important;
+    max-width: 100% !important;
+    
+    /* Espacio para que no toque los bordes y se vea pequeña */
+    padding: 30px !important; 
+    
+    /* Aseguramos que se mantenga en el centro */
+    display: block;
+    margin: auto;
+    
+    /* Fondo para que el área "vacía" no se vea rara */
+    background-color: #0d1117; 
 }
