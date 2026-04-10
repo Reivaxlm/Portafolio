@@ -10,7 +10,7 @@ function changeSlide(sliderId, direction) {
     
     const slides = wrapper.querySelectorAll('.slide');
     // BUSCAMOS LOS DOTS EN EL PADRE (slider-wrapper)
-    const dots = wrapper.parentElement.querySelectorAll('.dot'); 
+    const dots = wrapper.closest('.project-card').querySelectorAll('.dot');
     let current = 0;
 
     slides.forEach((s, i) => {
